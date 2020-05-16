@@ -1,0 +1,18 @@
+<svg width="910" height="240" viewBox="0 0 910 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 216.01L88.8996 28.1533" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="165.462" y1="214.307" x2="88.91" y2="30.5382" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="59.7332" y2="-5" transform="matrix(0.999883 -0.0152958 0.00882036 0.999961 47.4498 121.109)" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M377 216.01L459.9 28.1533" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="536.462" y1="214.307" x2="459.91" y2="30.5382" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="59.7332" y2="-5" transform="matrix(0.999883 -0.0152958 0.00882036 0.999961 418.45 121.109)" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="5" y1="-5" x2="192.049" y2="-5" transform="matrix(0.236304 -0.971679 0.966146 0.257997 192.436 219.66)" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="195.776" y2="-5" transform="matrix(-0.216823 -0.976211 0.971524 -0.23694 365.533 220)" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="121.962" y2="-5" transform="matrix(0.338685 0.9409 -0.929991 0.367582 228 28.1915)" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="97.1875" y2="-5" transform="matrix(0.338145 -0.941094 0.930217 0.36701 277.446 147.413)" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<path d="M905 121.5C905 173.937 864.69 216 815.5 216C766.31 216 726 173.937 726 121.5C726 69.0631 766.31 27 815.5 27C864.69 27 905 69.0631 905 121.5Z" stroke="white" stroke-width="10"/>
+<path d="M555.742 47.8041L555.742 214.5" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="120.514" y2="-5" transform="matrix(0.581609 0.813469 -0.804851 0.593476 635 121.898)" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<path d="M552.698 29.8546C750.402 11.6306 766.933 134.036 558.387 120.787" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="5.98342" y1="7.98347" x2="901.983" y2="5.01658" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<line x1="6" y1="235" x2="902" y2="235" stroke="white" stroke-width="10" stroke-linecap="round"/>
+</svg>

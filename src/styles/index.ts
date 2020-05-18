@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const AppContainer = styled.div`
   width: 100%;
+  position: relative;
 
   padding: 20px;
   padding-top: 80px;

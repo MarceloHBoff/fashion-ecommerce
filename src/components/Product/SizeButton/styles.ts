@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
-interface ContainerProps {
+interface IContainerProps {
   selected: boolean;
 }
 
-export const Container = styled.button<ContainerProps>`
+export const Container = styled.button<IContainerProps>`
   margin-right: 15px;
   border-radius: 4px;
   border: 2px solid #ccc;

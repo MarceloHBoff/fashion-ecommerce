@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const ProductImage = styled.img`
   width: 50%;
+  border-radius: 4px;
 `;
 
 export const ProductInfo = styled.div`
@@ -26,9 +27,35 @@ export const ProductName = styled.h3`
   margin: 1rem 0;
 `;
 
+export const ProductPriceWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
+
 export const ProductPrice = styled.span`
   font-size: 1.6rem;
-  margin-bottom: 2rem;
+  font-weight: bold;
+`;
+
+export const ProductInstallments = styled.span`
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ddd;
+  margin-left: 1.5rem;
+`;
+
+export const ProductSelectSize = styled.span`
+  font-size: 1.4rem;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+`;
+
+export const ProductInvalidSize = styled.span`
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #cf385a;
+  margin-bottom: 1.5rem;
 `;
 
 export const ProductSize = styled.div`

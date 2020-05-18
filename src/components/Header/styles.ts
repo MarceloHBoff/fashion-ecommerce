@@ -9,7 +9,7 @@ export const Container = styled.header`
   position: fixed;
   z-index: 99999;
   width: 100%;
-  height: 70px;
+  height: 55px;
 
   display: flex;
   justify-content: center;

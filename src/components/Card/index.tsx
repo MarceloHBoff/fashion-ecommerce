@@ -1,4 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
+import { setProduct } from '../../store/modules/product/action';
+import { IProduct } from '../../store/modules/product/types';
 
 import {
   ProductContainer,
@@ -7,19 +12,21 @@ import {
   ProductPrice,
 } from './styles';
 
-interface Product {
-  name: string;
-  image: string;
-  regular_price: string;
+interface ICardProps {
+  product: IProduct;
 }
 
-interface CardProps {
-  product: Product;
-}
+const Card: React.FC<ICardProps> = ({ product }) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-const Card: React.FC<CardProps> = ({ product }) => {
+  function handleClick() {
+    dispatch(setProduct(product));
+    history.push('/product');
+  }
+
   return (
-    <ProductContainer>
+    <ProductContainer onClick={handleClick}>
       <ProductImage src={product.image} />
       <ProductName>{product.name}</ProductName>
       <ProductPrice>{product.regular_price}</ProductPrice>

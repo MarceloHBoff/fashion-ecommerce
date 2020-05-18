@@ -1,29 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 import data from '../../assets/data.json';
+import { IProduct } from '../../store/modules/product/types';
 import Card from '../Card';
 import Shimmer from '../Shimmer';
 
 import { ProductCards } from './styles';
 
-export interface Product {
-  name: string;
-  style: string;
-  code_color: string;
-  color_slug: string;
-  color: string;
-  on_sale: boolean;
-  regular_price: string;
-  actual_price: string;
-  discount_percentage: string;
-  installments: string;
-  image: string;
-}
-
 const ProductsList: React.FC = () => {
   const shimmerArray = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,7 +19,7 @@ const ProductsList: React.FC = () => {
       // fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')
       //   .then(response => response.json())
       //   .then(response => setProducts(response));
-    }, 2000);
+    }, 1);
   }, []);
 
   return (

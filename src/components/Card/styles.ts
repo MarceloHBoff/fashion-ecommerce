@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled.button`
   background: #fff;
   border-radius: 4px;
 

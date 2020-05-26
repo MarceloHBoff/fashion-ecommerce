@@ -8,9 +8,25 @@ export const Container = styled.div`
   align-items: flex-start;
 `;
 
-export const ProductImage = styled.img`
+export const ProductImageWrapper = styled.div`
+  position: relative;
   width: 50%;
+`;
+
+export const ProductImage = styled.img`
+  width: 100%;
   border-radius: 4px;
+`;
+
+export const ProductDiscount = styled.span`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #da2f6c;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 5px;
 `;
 
 export const ProductInfo = styled.div`
@@ -31,6 +47,13 @@ export const ProductPriceWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+`;
+
+export const ProductSale = styled.span`
+  color: #ccc;
+  font-size: 1.6rem;
+  text-decoration: line-through;
+  margin-right: 8px;
 `;
 
 export const ProductPrice = styled.span`

@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { IApplicationState } from '../../store';
+import { addToCart } from '../../store/modules/cart/actions';
 import { IProduct } from '../../store/modules/product/types';
 
 import SizeButton from './SizeButton';
 import {
   Container,
+  ProductImageWrapper,
   ProductImage,
+  ProductDiscount,
   ProductInfo,
   ProductName,
   ProductPriceWrapper,
+  ProductSale,
   ProductPrice,
   ProductInstallments,
   ProductSelectSize,
@@ -24,6 +28,8 @@ const Product: React.FC = () => {
     state => state.product.data,
   ) as IProduct;
 
+  const dispatch = useDispatch();
+
   const [size, setSize] = useState('');
   const [invalidSize, setInvalidSize] = useState(false);
 
@@ -32,16 +38,27 @@ const Product: React.FC = () => {
   function handleAddToBag() {
     if (!size) {
       setInvalidSize(true);
+      return;
     }
+
+    dispatch(addToCart(product));
   }
 
   return (
     <Container>
-      <ProductImage src={product.image} alt={product.name} />
+      <ProductImageWrapper>
+        <ProductImage src={product.image} alt={product.name} />
+        {product.discount_percentage && (
+          <ProductDiscount>-{product.discount_percentage}</ProductDiscount>
+        )}
+      </ProductImageWrapper>
       <ProductInfo>
         <ProductName>{product.name}</ProductName>
         <ProductPriceWrapper>
-          <ProductPrice>{product.regular_price}</ProductPrice>
+          {product.on_sale && (
+            <ProductSale>{product.regular_price}</ProductSale>
+          )}
+          <ProductPrice>{product.actual_price}</ProductPrice>
           <ProductInstallments>
             em até {product.installments}
           </ProductInstallments>

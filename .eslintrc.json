@@ -42,6 +42,7 @@
     "import/prefer-default-export": "off",
     "@typescript-eslint/interface-name-prefix": "off",
     "no-return-assign": "off",
+    "no-case-declarations": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

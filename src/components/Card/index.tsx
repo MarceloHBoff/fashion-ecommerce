@@ -9,7 +9,10 @@ import {
   ProductContainer,
   ProductImage,
   ProductName,
+  ProductValue,
+  ProductSale,
   ProductPrice,
+  ProductDiscount,
 } from './styles';
 
 interface ICardProps {
@@ -29,7 +32,13 @@ const Card: React.FC<ICardProps> = ({ product }) => {
     <ProductContainer onClick={handleClick}>
       <ProductImage src={product.image} />
       <ProductName>{product.name}</ProductName>
-      <ProductPrice>{product.regular_price}</ProductPrice>
+      <ProductValue>
+        {product.on_sale && <ProductSale>{product.regular_price}</ProductSale>}
+        <ProductPrice>{product.actual_price}</ProductPrice>
+      </ProductValue>
+      {product.discount_percentage && (
+        <ProductDiscount>-{product.discount_percentage}</ProductDiscount>
+      )}
     </ProductContainer>
   );
 };

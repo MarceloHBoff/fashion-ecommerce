@@ -19,6 +19,8 @@ export const SearchInput = styled.input`
   ::placeholder {
     color: #bbb;
   }
+
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.2);
 `;
 
 export const SearchItens = styled.div`

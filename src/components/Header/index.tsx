@@ -1,7 +1,8 @@
 import React from 'react';
 import { FiSearch, FiShoppingBag } from 'react-icons/fi';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { IApplicationState } from '../../store';
 import { openBag, openSearch } from '../../store/modules/sidebar/actions';
 
 import {
@@ -14,6 +15,10 @@ import {
 } from './styles';
 
 const Header: React.FC = () => {
+  const cartProducts = useSelector(
+    (state: IApplicationState) => state.cart.data,
+  );
+
   const dispatch = useDispatch();
 
   return (
@@ -26,7 +31,13 @@ const Header: React.FC = () => {
           </button>
           <HeaderIconsShoppingBag onClick={() => dispatch(openBag(true))}>
             <FiShoppingBag color="#fff" size={25} />
-            <Badge>10</Badge>
+            <Badge>
+              {cartProducts.reduce(
+                (accumulator, currentValue) =>
+                  accumulator + currentValue.quantity,
+                0,
+              )}
+            </Badge>
           </HeaderIconsShoppingBag>
         </HeaderIcons>
       </HeaderContainer>

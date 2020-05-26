@@ -5,7 +5,7 @@ import { ISidebarState, SidebarTypes } from './types';
 const INITIAL_STATE: ISidebarState = {
   data: {
     openBag: false,
-    openSearch: true,
+    openSearch: false,
   },
 };
 

@@ -1,23 +1,16 @@
-import { createStore, applyMiddleware, Store } from 'redux';
-// import createSagaMiddleware from 'redux-saga';
+import { createStore, Store } from 'redux';
 
+import { ICartState } from './modules/cart/types';
 import { IProductState } from './modules/product/types';
 import rootReducer from './modules/rootReducer';
 import { ISidebarState } from './modules/sidebar/types';
-// import rootSaga from './ducks/rootSaga';
 
 export interface IApplicationState {
   sidebar: ISidebarState;
   product: IProductState;
+  cart: ICartState;
 }
 
-// const sagaMiddleware = createSagaMiddleware();
-
-const store: Store<IApplicationState> = createStore(
-  rootReducer,
-  // applyMiddleware(sagaMiddleware),
-);
-
-// sagaMiddleware.run(rootSaga);
+const store: Store<IApplicationState> = createStore(rootReducer);
 
 export default store;

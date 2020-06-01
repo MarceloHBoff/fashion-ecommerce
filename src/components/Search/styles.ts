@@ -9,15 +9,15 @@ export const SearchInput = styled.input`
   width: 100%;
 
   padding: 15px;
-  color: #fff;
+  color: #000;
   font-size: 1.5rem;
 
-  border: 6px solid #666;
+  border: 6px solid #ddd;
   border-radius: 4px;
-  background: #555;
+  background: #eee;
 
   ::placeholder {
-    color: #bbb;
+    color: #666;
   }
 
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.2);
@@ -37,7 +37,7 @@ export const SearchNone = styled.div`
 
   span {
     font-size: 2rem;
-    color: #bbb;
+    color: #333;
   }
 `;
 
@@ -53,7 +53,7 @@ export const SearchedProducts = styled.button`
   transition: all 0.2s;
 
   :hover {
-    background: #666;
+    background: #bbb;
     transform: translateX(-10px);
   }
 `;
@@ -71,7 +71,7 @@ export const SearchedProductsImage = styled.img`
 `;
 
 export const SearchedProductsName = styled.p`
-  color: #fff;
+  color: #000;
   font-size: 1.4rem;
   font-weight: bold;
   margin-left: 1rem;
@@ -87,12 +87,12 @@ export const SearchedProductsPriceWrapper = styled.div`
 `;
 
 export const SearchedProductsPrice = styled.p`
-  color: #fff;
+  color: #000;
   font-size: 1.6rem;
   font-weight: bold;
 `;
 
 export const SearchedProductsInstallments = styled.p`
-  color: #ddd;
+  color: #666;
   font-size: 1.4rem;
 `;

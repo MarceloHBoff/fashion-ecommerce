@@ -43,6 +43,7 @@
     "@typescript-eslint/interface-name-prefix": "off",
     "no-return-assign": "off",
     "no-case-declarations": "off",
+    "react/no-array-index-key": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

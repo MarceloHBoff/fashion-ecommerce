@@ -50,7 +50,7 @@ export const ProductPriceWrapper = styled.div`
 `;
 
 export const ProductSale = styled.span`
-  color: #ccc;
+  color: #666;
   font-size: 1.6rem;
   text-decoration: line-through;
   margin-right: 8px;
@@ -64,13 +64,13 @@ export const ProductPrice = styled.span`
 export const ProductInstallments = styled.span`
   font-size: 1.4rem;
   font-weight: bold;
-  color: #ddd;
+  color: #666;
   margin-left: 1.5rem;
 `;
 
 export const ProductSelectSize = styled.span`
   font-size: 1.4rem;
-  color: #ddd;
+  color: #666;
   margin-bottom: 1.5rem;
 `;
 
@@ -96,7 +96,7 @@ export const ProductAddBag = styled.button`
 
   transition: all 0.2s;
 
-  box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.2);
 
   :active {
     transform: scale(0.95);

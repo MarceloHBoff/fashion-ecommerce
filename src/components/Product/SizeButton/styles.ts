@@ -12,19 +12,23 @@ export const Container = styled.button<IContainerProps>`
 
   transition: all 0.2s;
 
-  ${props =>
-    props.selected &&
-    css`
-      border-color: #da2f6c;
-      background: #da2f6c;
-    `}
-
   :hover {
     border-color: #da2f6c;
   }
 
   span {
-    color: #fff;
+    color: #000;
     font-size: 1.5rem;
   }
+
+  ${props =>
+    props.selected &&
+    css`
+      border-color: #da2f6c;
+      background: #da2f6c;
+
+      span {
+        color: #fff;
+      }
+    `}
 `;

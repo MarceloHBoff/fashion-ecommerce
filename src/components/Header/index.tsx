@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { FiSearch, FiShoppingBag } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -21,6 +21,13 @@ const Header: React.FC = () => {
 
   const dispatch = useDispatch();
 
+  const totalItens = useMemo(() => {
+    return cartProducts.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.quantity,
+      0,
+    );
+  }, [cartProducts]);
+
   return (
     <Container>
       <HeaderContainer>
@@ -31,13 +38,7 @@ const Header: React.FC = () => {
           </button>
           <HeaderIconsShoppingBag onClick={() => dispatch(openBag(true))}>
             <FiShoppingBag color="#fff" size={25} />
-            <Badge>
-              {cartProducts.reduce(
-                (accumulator, currentValue) =>
-                  accumulator + currentValue.quantity,
-                0,
-              )}
-            </Badge>
+            <Badge>{totalItens}</Badge>
           </HeaderIconsShoppingBag>
         </HeaderIcons>
       </HeaderContainer>

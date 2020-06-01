@@ -41,7 +41,7 @@ const Product: React.FC = () => {
       return;
     }
 
-    dispatch(addToCart(product));
+    dispatch(addToCart(product, size));
   }
 
   return (
@@ -74,6 +74,7 @@ const Product: React.FC = () => {
             s =>
               s.available && (
                 <SizeButton
+                  key={s.size}
                   size={s.size}
                   onClick={() => setSize(s.size)}
                   selected={size === s.size}

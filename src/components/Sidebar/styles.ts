@@ -16,7 +16,7 @@ export const Container = styled.div`
 export const SidebarContainer = styled.aside`
   width: 400px;
   height: 99%;
-  background: #555;
+  background: #eee;
 
   animation: growth 0.4s ease-in-out;
 
@@ -42,7 +42,7 @@ export const SidebarHeader = styled.header`
 `;
 
 export const SidebarTitle = styled.span`
-  color: #fff;
+  color: #000;
   font-weight: bold;
   margin-left: 10px;
   font-size: 1.5rem;

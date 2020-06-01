@@ -28,7 +28,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ children, title = '' }) => {
       <SidebarContainer>
         <SidebarHeader>
           <button type="button" onClick={handleClose}>
-            <FiArrowRight color="#fff" size={20} />
+            <FiArrowRight color="#000" size={20} />
           </button>
           <SidebarTitle>{title}</SidebarTitle>
         </SidebarHeader>

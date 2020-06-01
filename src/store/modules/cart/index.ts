@@ -6,25 +6,57 @@ const INITIAL_STATE: ICartState = {
   data: [],
 };
 
-const reducer: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
+const reducer: Reducer<ICartState> = (
+  state = INITIAL_STATE,
+  { type, payload },
+) => {
+  switch (type) {
     case CartTypes.ADD_TO_CART:
-      const newState = state.data;
-      const newProduct = action.payload.product;
-
-      const findProductIndex = state.data.findIndex(
-        product => product.name === newProduct.name,
+      const findProduct = state.data.find(
+        product =>
+          product.name === payload.product.name &&
+          product.size === payload.size,
       );
 
-      if (findProductIndex >= 0) {
-        newProduct.quantity = newState[findProductIndex].quantity + 1;
-      } else {
-        newProduct.quantity = 1;
-        newState.push(newProduct);
+      if (findProduct) {
+        return {
+          data: state.data.map(product =>
+            product.name === findProduct.name &&
+            product.size === findProduct.size
+              ? { ...findProduct, quantity: findProduct.quantity + 1 }
+              : product,
+          ),
+        };
       }
 
       return {
-        data: newState,
+        data: [
+          ...state.data,
+          { ...payload.product, size: payload.size, quantity: 1 },
+        ],
+      };
+    case CartTypes.REMOVE_FROM_CART:
+      return {
+        data: state.data.filter(
+          product =>
+            product.name !== payload.name || product.size !== payload.size,
+        ),
+      };
+    case CartTypes.INCREMENT:
+      return {
+        data: state.data.map(product =>
+          product.name === payload.name && product.size === payload.size
+            ? { ...product, quantity: product.quantity + 1 }
+            : product,
+        ),
+      };
+    case CartTypes.DECREMENT:
+      return {
+        data: state.data.map(product =>
+          product.name === payload.name && product.size === payload.size
+            ? { ...product, quantity: product.quantity - 1 }
+            : product,
+        ),
       };
     default:
       return state;

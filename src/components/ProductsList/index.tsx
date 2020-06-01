@@ -25,8 +25,8 @@ const ProductsList: React.FC = () => {
   return (
     <ProductCards>
       {products.length === 0
-        ? shimmerArray.map(() => <Shimmer />)
-        : products.map(product => <Card product={product} />)}
+        ? shimmerArray.map((_, i) => <Shimmer key={i} />)
+        : products.map((product, i) => <Card key={i} product={product} />)}
     </ProductCards>
   );
 };

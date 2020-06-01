@@ -34,7 +34,7 @@ const Search: React.FC = () => {
 
   const [allProducts, setAllProducts] = useState<IProduct[]>([]);
   const [searchedProducts, setSearchedProducts] = useState<IProduct[]>([]);
-  const [searchValue, setSearchValue] = useState('vestido');
+  const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
     fetch('https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog')

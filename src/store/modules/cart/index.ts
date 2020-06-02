@@ -51,6 +51,20 @@ const reducer: Reducer<ICartState> = (
         ),
       };
     case CartTypes.DECREMENT:
+      const findProductDecrement = state.data.find(
+        product =>
+          product.name === payload.name && product.size === payload.size,
+      );
+
+      if (findProductDecrement && findProductDecrement.quantity === 1) {
+        return {
+          data: state.data.filter(
+            product =>
+              product.name !== payload.name || product.size !== payload.size,
+          ),
+        };
+      }
+
       return {
         data: state.data.map(product =>
           product.name === payload.name && product.size === payload.size

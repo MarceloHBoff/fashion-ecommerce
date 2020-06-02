@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a7622e31-ae43-4ba8-981b-8ac516a3d20f/deploy-status)](https://app.netlify.com/sites/boff-fashion-ecommerce/deploys)
+
 <h1 align="center">AMARO</h1>
 
 <h4 align="center">

@@ -26,7 +26,7 @@ export const BagNone = styled.div`
 
 export const BagTotal = styled.div`
   width: 100%;
-  height: 100px;
+  height: 110px;
   padding: 15px;
 
   display: flex;

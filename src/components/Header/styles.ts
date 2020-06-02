@@ -51,8 +51,8 @@ export const Badge = styled.span`
   border-radius: 50%;
   background: #fff;
   color: #000;
-  font-size: 1.3rem;
-  line-height: 2.2rem;
+  font-size: 15px;
+  line-height: 22px;
   font-weight: bold;
   text-align: center;
 `;

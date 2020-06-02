@@ -41,6 +41,8 @@ const Product: React.FC = () => {
       return;
     }
 
+    setInvalidSize(false);
+
     dispatch(addToCart(product, size));
   }
 

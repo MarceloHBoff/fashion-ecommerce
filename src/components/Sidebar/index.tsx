@@ -30,6 +30,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ children, title = '' }) => {
           <button type="button" onClick={handleClose}>
             <FiArrowRight color="#000" size={20} />
           </button>
+
           <SidebarTitle>{title}</SidebarTitle>
         </SidebarHeader>
         {children}

@@ -1,4 +1,8 @@
+import { RootStateOrAny } from 'react-redux';
+
 import { createStore, Store } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 import { ICartState } from './modules/cart/types';
 import { IProductState } from './modules/product/types';
@@ -11,6 +15,17 @@ export interface IApplicationState {
   cart: ICartState;
 }
 
-const store: Store<IApplicationState> = createStore(rootReducer);
+const persistReducerConfigured = persistReducer<RootStateOrAny>(
+  {
+    key: '@fashionista',
+    storage,
+    blacklist: ['sidebar'],
+  },
+  rootReducer,
+);
 
-export default store;
+const store: Store<IApplicationState> = createStore(persistReducerConfigured);
+
+const persistor = persistStore(store);
+
+export { store, persistor };

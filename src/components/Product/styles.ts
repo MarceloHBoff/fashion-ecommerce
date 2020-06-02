@@ -4,13 +4,19 @@ export const Container = styled.div`
   width: 100%;
 
   display: flex;
-  justify-content: baseline;
   align-items: flex-start;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
 `;
 
 export const ProductImageWrapper = styled.div`
   position: relative;
-  width: 50%;
+
+  @media (min-width: 1280px) {
+    width: 50%;
+  }
 `;
 
 export const ProductImage = styled.img`
@@ -30,11 +36,15 @@ export const ProductDiscount = styled.span`
 `;
 
 export const ProductInfo = styled.div`
-  width: 50%;
   padding: 0px 20px;
 
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  @media (min-width: 1280px) {
+    width: 50%;
+  }
 `;
 
 export const ProductName = styled.h3`
@@ -100,5 +110,9 @@ export const ProductAddBag = styled.button`
 
   :active {
     transform: scale(0.95);
+  }
+
+  @media (max-width: 1280px) {
+    width: 100%;
   }
 `;

@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 export const SidebarContainer = styled.aside`
   width: 400px;
-  height: 99%;
+  height: 100%;
   background: #eee;
 
   animation: growth 0.4s ease-in-out;
@@ -27,6 +27,10 @@ export const SidebarContainer = styled.aside`
     100% {
       transform: translate(0px);
     }
+  }
+
+  @media (max-width: 1280px) {
+    width: 100%;
   }
 `;
 
